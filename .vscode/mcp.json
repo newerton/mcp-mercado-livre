@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "products": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "D:/www/newerton/mcp/mcp-mercado-livre/build/main.js"
+      ]
+    }
+  }
+}
