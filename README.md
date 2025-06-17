@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/newerton-mcp-mercado-livre-badge.png)](https://mseep.ai/app/newerton-mcp-mercado-livre)
+
 <div align="center">
 
 # Mercado Livre - MCP Server
