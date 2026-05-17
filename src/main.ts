@@ -6,14 +6,18 @@ import { MercadoLivreApiService } from './infrastructure/services/MercadoLivreAp
 import { MercadoLivreToolsController } from './interface/controllers/MercadoLivreToolsController.js';
 
 async function main() {
-  const server = new McpServer({
-    name: 'mercad-livre',
-    version: '1.0.0',
-    capabilities: {
-      resources: {},
-      tools: {},
+  const server = new McpServer(
+    {
+      name: 'mercado-livre',
+      version: '1.0.0',
     },
-  });
+    {
+      capabilities: {
+        resources: {},
+        tools: {},
+      },
+    },
+  );
 
   const apiService = new MercadoLivreApiService();
   const service = new MercadoLivreService(apiService);
