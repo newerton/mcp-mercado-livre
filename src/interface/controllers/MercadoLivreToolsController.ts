@@ -16,11 +16,13 @@ export class MercadoLivreToolsController {
   }
 
   private registerGetStockToolHandler(): void {
-    this.server.tool(
+    this.server.registerTool(
       'get-produtos',
-      'Buscar informações básicas de produtos',
       {
-        products: z.array(z.string()).describe('Array of product names'),
+        description: 'Buscar informações básicas de produtos',
+        inputSchema: {
+          products: z.array(z.string()).describe('Array of product names'),
+        },
       },
       async ({ products }) => {
         const infos = await this.service.getProducts(products);
@@ -28,7 +30,7 @@ export class MercadoLivreToolsController {
         return {
           content: [
             {
-              type: 'text',
+              type: 'text' as const,
               text: JSON.stringify(infos, null, 2),
             },
           ],
