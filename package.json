@@ -22,7 +22,8 @@
     "start": "node build/main.js",
     "start:dev": "tsx watch src/main.ts",
     "build": "tsc && chmod 755 build/main.js",
-    "lint": "eslint \"{src,test}/**/*.ts\" --fix"
+    "ts:check": "tsc --noEmit",
+    "lint": "biome check"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.26.0",
@@ -32,20 +33,13 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^22.15.2",
+    "@biomejs/biome": "^2.4.5",
+    "@types/node": "^25.8.0",
     "@types/voca": "^1.4.6",
-    "@typescript-eslint/eslint-plugin": "^8.31.0",
-    "@typescript-eslint/parser": "^8.31.0",
-    "eslint": "^9.25.1",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-import-resolver-typescript": "^4.3.4",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.2.6",
-    "eslint-plugin-unused-imports": "^4.1.4",
     "prettier": "^3.5.3",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.3",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.31.0"
   }
 }

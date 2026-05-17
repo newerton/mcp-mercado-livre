@@ -3,9 +3,7 @@
     "mercado-livre": {
       "type": "stdio",
       "command": "node",
-      "args": [
-        "${workspaceFolder}/build/main.js"
-      ]
+      "args": ["${workspaceFolder}/build/main.js"]
     }
   }
 }

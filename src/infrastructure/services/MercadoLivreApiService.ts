@@ -1,6 +1,6 @@
 import voca from 'voca';
 
-import { GetApiProductInput } from '../../domain/models/MercadoLivreServiceModel.js';
+import type { GetApiProductInput } from '../../domain/models/MercadoLivreServiceModel.js';
 
 export class MercadoLivreApiService {
   private readonly API_BASE = 'https://lista.mercadolivre.com.br';

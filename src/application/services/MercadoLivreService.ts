@@ -2,9 +2,9 @@ import * as cheerio from 'cheerio';
 import type { Element } from 'domhandler';
 import voca from 'voca';
 
-import { MercadoLivreCrawlerOutput } from '../../domain/models/MercadoLivreServiceModel.js';
+import type { MercadoLivreCrawlerOutput } from '../../domain/models/MercadoLivreServiceModel.js';
 import { wordsMatching } from '../../domain/utils/crawler/words-matching.js';
-import { MercadoLivreApiService } from '../../infrastructure/services/MercadoLivreApiService.js';
+import type { MercadoLivreApiService } from '../../infrastructure/services/MercadoLivreApiService.js';
 
 export class MercadoLivreService {
   url: string | null = null;
@@ -99,7 +99,7 @@ export class MercadoLivreService {
     return buttonNext;
   };
 
-  private request = async (query: string): Promise<any> => {
+  private request = async (query: string): Promise<string | null> => {
     const search = voca.slugify(query);
     const limit = 50;
     const page = this.page > 1 ? `_Desde_${limit * (this.page - 1) + 1}` : '';
